@@ -1,0 +1,46 @@
+import { type NextRequest, NextResponse } from "next/server"
+
+export async function POST(request: NextRequest) {
+  try {
+    const formData = await request.formData()
+    const name = formData.get("name") as string
+    const email = formData.get("email") as string
+    const subject = formData.get("subject") as string
+    const message = formData.get("message") as string
+
+    // In a production environment, you would integrate with an email service
+    // like SendGrid, Resend, or AWS SES. For now, we'll log the data
+    // and return a success response.
+
+    console.log("Contact form submission:", {
+      name,
+      email,
+      subject,
+      message,
+      timestamp: new Date().toISOString(),
+    })
+
+    // Here you would typically send the email using your preferred service:
+    // await sendEmail({
+    //   to: 'contact@partygemai.com',
+    //   from: email,
+    //   subject: `Contact Form: ${subject}`,
+    //   html: `
+    //     <h3>New Contact Form Submission</h3>
+    //     <p><strong>Name:</strong> ${name}</p>
+    //     <p><strong>Email:</strong> ${email}</p>
+    //     <p><strong>Subject:</strong> ${subject}</p>
+    //     <p><strong>Message:</strong></p>
+    //     <p>${message}</p>
+    //   `
+    // })
+
+    return NextResponse.json({
+      success: true,
+      message: "Message sent successfully!",
+    })
+  } catch (error) {
+    console.error("Error processing contact form:", error)
+    return NextResponse.json({ success: false, message: "Failed to send message" }, { status: 500 })
+  }
+}
