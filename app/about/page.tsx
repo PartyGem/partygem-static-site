@@ -223,10 +223,10 @@ export default function AboutPage() {
           <div className="flex justify-center mt-12">
             <div className="flex items-center space-x-4 p-4 bg-muted/50 rounded-lg">
               <Image
-                src="/images/nvidia-inception-logo.png"
+                src="/images/nvidia-inception-program-badge-rgb-for-screen.svg"
                 alt="NVIDIA Inception Program"
-                width={120}
-                height={60}
+                width={250}
+                height={108}
                 className="object-contain opacity-70"
                 priority
               />

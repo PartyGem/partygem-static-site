@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Both partygemai.com and www.partygemai.com will work
+# Add both domains in Netlify dashboard: Site settings → Domain management
+# No redirect needed - both domains will serve the same content
+
