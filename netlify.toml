@@ -6,6 +6,7 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 # Both partygemai.com and www.partygemai.com will work
 # Add both domains in Netlify dashboard: Site settings → Domain management
