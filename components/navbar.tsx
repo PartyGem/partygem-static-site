@@ -31,6 +31,7 @@ export function Navbar() {
     { name: "Features", href: "/features" },
     { name: "About", href: "/about" },
     { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
   ]
 
   return (
@@ -65,7 +66,9 @@ export function Navbar() {
         <div className="flex items-center space-x-4">
           <ThemeToggle />
           <Button asChild className="hidden md:flex">
-            <Link href="/contact">Contact Us</Link>
+            <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
+              Try the app
+            </a>
           </Button>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
@@ -91,7 +94,9 @@ export function Navbar() {
               </Link>
             ))}
             <Button asChild className="w-full mt-4">
-              <Link href="/contact">Contact Us</Link>
+              <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
+                Try the app
+              </a>
             </Button>
           </div>
         </div>
