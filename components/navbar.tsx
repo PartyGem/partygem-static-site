@@ -67,7 +67,7 @@ export function Navbar() {
           <ThemeToggle />
           <Button asChild className="hidden md:flex">
             <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-              Try the app
+              Try PartyGem
             </a>
           </Button>
 
@@ -95,7 +95,7 @@ export function Navbar() {
             ))}
             <Button asChild className="w-full mt-4">
               <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-                Try the app
+                Try PartyGem
               </a>
             </Button>
           </div>

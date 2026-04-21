@@ -14,8 +14,8 @@ export function Footer() {
             </Link>
             <p className="mt-2 text-muted-foreground">
               <Trans>
-                Analytics-driven event management platform for creating unforgettable experiences with measurable
-                results.
+                AI/ML & full-stack consulting agency. Makers of PartyGem and a growing family of Gems powering Events
+                as a Service.
               </Trans>
             </p>
           </div>
@@ -27,7 +27,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/features" className="text-muted-foreground hover:text-foreground">
-                  <Trans>Features</Trans>
+                  <Trans>PartyGem Features</Trans>
                 </Link>
               </li>
               <li>
@@ -35,12 +35,22 @@ export function Footer() {
                   <Trans>Pricing</Trans>
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://app.partygemai.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <Trans>Try PartyGem</Trans>
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-medium mb-3">
-              <Trans>Company</Trans>
+              <Trans>Agency</Trans>
             </h3>
             <ul className="space-y-2">
               <li>
