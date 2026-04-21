@@ -41,7 +41,7 @@ export default function FeaturesPage() {
               </h1>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                 <Trans>
-                  Discover how PartyGemAI's comprehensive toolkit helps you create, manage, and analyze events with
+                  Discover how PartyGem's comprehensive toolkit helps you create, manage, and analyze events with
                   precision and ease throughout the entire event lifecycle.
                 </Trans>
               </p>
@@ -324,7 +324,7 @@ export default function FeaturesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tighter mb-4">
-                <Trans>See PartyGemAI in action</Trans>
+                <Trans>See PartyGem in action</Trans>
               </h2>
               <p className="text-xl text-muted-foreground mb-6">
                 <Trans>
@@ -343,7 +343,7 @@ export default function FeaturesPage() {
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/PlCraHnOq78?si=D_8iRrcnPVskbpMP&start=18"
-                title="PartyGemAI MVP Demo"
+                title="PartyGem MVP Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

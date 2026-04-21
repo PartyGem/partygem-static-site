@@ -97,28 +97,30 @@ export default function Home() {
         className="relative w-full min-h-[90vh] flex items-center justify-center hero-gradient overflow-hidden"
       >
         <div className="container px-4 md:px-6 py-24 md:py-32 relative z-10">
-          <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-4 py-1.5 text-xs font-medium tracking-wide uppercase text-muted-foreground backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5 text-brand-purple" />
-              <Trans>AI/ML & Full-Stack Consulting · Makers of PartyGem</Trans>
+          <div className="flex flex-col items-center text-center space-y-6 sm:space-y-8 max-w-4xl mx-auto">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1.5 text-[10px] sm:text-xs font-medium tracking-wide uppercase text-muted-foreground backdrop-blur max-w-full">
+              <Sparkles className="h-3.5 w-3.5 text-brand-purple flex-shrink-0" />
+              <span className="truncate sm:whitespace-normal">
+                <Trans>AI/ML & Full-Stack Consulting · Makers of PartyGem</Trans>
+              </span>
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
               <Trans>We build intelligent software. Starting with how the world gathers.</Trans>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-[800px]">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-[800px]">
               <Trans>
                 PartyGem AI is a consulting agency for AI/ML and full-stack software development. Our flagship product,
                 PartyGem, is an intelligent event management service — the first of a growing family of Gems powering
                 Events as a Service.
               </Trans>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Button size="lg" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-8 w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto" asChild>
                 <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
                   <Trans>Try PartyGem</Trans>
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">
                   <Trans>Work with our agency</Trans>
                 </Link>
@@ -152,11 +154,11 @@ export default function Home() {
 
       <section ref={featuresRef} className="w-full py-16 md:py-24 bg-muted/50">
         <div className="container px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight">
               <Trans>One agency. A family of Gems.</Trans>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               <Trans>
                 PartyGem AI builds and orchestrates a portfolio of products — "Gems" — that together power Events as a
                 Service. PartyGem is live today; Service Gem, Venue Gem, and RoboGem are on the roadmap.
@@ -264,14 +266,14 @@ export default function Home() {
             </Trans>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <Button size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-10">
+            <Button size="lg" className="w-full sm:w-auto" asChild>
               <Link href="/features">
                 <Trans>Explore PartyGem features</Trans>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
               <Link href="/about">
                 <Trans>Meet the agency</Trans>
               </Link>
@@ -288,10 +290,10 @@ export default function Home() {
                 <ShieldCheck className="h-3.5 w-3.5 text-brand-aqua" />
                 <Trans>Federal contracting</Trans>
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 mb-4 tracking-tight">
                 <Trans>Registered to bid on federal software contracts.</Trans>
               </h2>
-              <p className="text-lg text-muted-foreground mb-4">
+              <p className="text-base sm:text-lg text-muted-foreground mb-4">
                 <Trans>
                   PartyGem AI is partnered with the U.S. federal government to pursue software-related contracts
                   through SAM.gov, and we engage with non-dilutive funding vehicles such as the NSF SBIR program.
@@ -303,18 +305,12 @@ export default function Home() {
                   federal contracting officer, primes partner, or agency PM, we'd love to talk.
                 </Trans>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" asChild>
-                  <Link href="/contact">
-                    <Trans>Contact our government team</Trans>
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="/about">
-                    <Trans>Learn about our capabilities</Trans>
-                  </Link>
-                </Button>
-              </div>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/about">
+                  <Trans>Learn about our capabilities</Trans>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="rounded-lg border border-border bg-background p-5">
@@ -363,22 +359,22 @@ export default function Home() {
       <section className="w-full py-16 md:py-24 bg-muted/50">
         <div className="container px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight">
               <Trans>Run your next event — or your next product — with us.</Trans>
             </h2>
-            <p className="text-xl text-muted-foreground mb-6">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6">
               <Trans>
                 Use PartyGem to launch an event today, or bring us your AI/ML and full-stack challenges and we'll help
                 you ship.
               </Trans>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" className="w-full sm:w-auto" asChild>
                 <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
                   <Trans>Try PartyGem</Trans>
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">
                   <Trans>Talk to the agency</Trans>
                 </Link>

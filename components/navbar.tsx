@@ -38,7 +38,9 @@ export function Navbar() {
     <header
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-200",
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent",
+        isScrolled
+          ? "bg-background/95 supports-[backdrop-filter]:bg-background/90 backdrop-blur-md border-b shadow-sm"
+          : "bg-transparent",
       )}
     >
       <div className="container flex h-16 items-center justify-between">
@@ -79,7 +81,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden border-t">
+        <div className="md:hidden border-t bg-background shadow-sm">
           <div className="container py-4 space-y-4">
             {navItems.map((item) => (
               <Link
