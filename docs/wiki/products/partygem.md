@@ -19,7 +19,7 @@ PartyGem **makes the event happen by managing your event**. It's our flagship pr
 - **Analytics (Business tier)** — real-time KPIs, custom dashboards, sentiment and engagement tracking.
 - **AI-powered features** — semantic search over event content (Pinecone), RAG-assisted discovery, unified query over event data.
 
-See the live features page at [`/features`](https://partygemai.com/features) and the pricing tiers at [`/pricing`](https://partygemai.com/pricing).
+See the live features page at [`/features`](https://partygemai.com/features). Pricing and plan tiers live inside the app at [`app.partygemai.com`](https://app.partygemai.com); they are intentionally not mirrored on the marketing site so plans can evolve without a marketing deploy.
 
 ---
 

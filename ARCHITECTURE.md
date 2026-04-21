@@ -103,11 +103,13 @@ This is the **marketing and corporate site** for PartyGem AI the agency.
 **Routes:**
 - `/` — Home. Positions the agency + Gems family + government contracting.
 - `/about` — Mission, Gems family, government contracting, founders, values.
-- `/features` — PartyGem product features (current + roadmap).
-- `/pricing` — PartyGem subscription tiers.
+- `/features` — PartyGem product features (current + roadmap). Includes an explicit primer distinguishing PartyGem AI (agency) from PartyGem (the product).
 - `/contact` — Early access / contact form (agency + product).
 - `/privacy`, `/terms` — Legal.
 - `/dashboards`, `/admin`, `/api`, `/events` — Internal / demo routes (see `app/`).
+
+**Intentionally not on the static site:**
+- Pricing / plan tiers. Pricing lives inside the PartyGem app at `https://app.partygemai.com` so plans can evolve without marketing-site deploys.
 
 ---
 

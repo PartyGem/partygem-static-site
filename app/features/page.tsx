@@ -18,6 +18,7 @@ import {
   Camera,
   Bot,
   ExternalLink,
+  Sparkles,
 } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 
@@ -35,20 +36,40 @@ export default function FeaturesPage() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1.5 text-[10px] sm:text-xs font-medium uppercase tracking-wide text-muted-foreground backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5 text-brand-purple flex-shrink-0" />
+              <Trans>PartyGem · The flagship product from PartyGem AI</Trans>
+            </span>
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
                 <Trans>Powerful Features for Exceptional Events</Trans>
               </h1>
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+              <p className="mx-auto max-w-[760px] text-base sm:text-lg md:text-xl text-muted-foreground">
                 <Trans>
-                  Discover how PartyGem's comprehensive toolkit helps you create, manage, and analyze events with
-                  precision and ease throughout the entire event lifecycle.
+                  Discover how PartyGem — our intelligent event management service — helps you create, manage, and
+                  analyze events with precision and ease throughout the entire event lifecycle.
                 </Trans>
               </p>
-              <p className="mx-auto max-w-[600px] text-muted-foreground font-medium">
+              <p className="mx-auto max-w-[600px] text-sm sm:text-base text-muted-foreground font-medium">
                 <Trans>
                   We empower anyone to run events like a pro — no prior event management experience required.
                 </Trans>
+              </p>
+            </div>
+            <div className="mx-auto max-w-2xl rounded-lg border border-border bg-background/60 p-4 text-left text-sm text-muted-foreground mt-2">
+              <p>
+                <span className="font-semibold text-foreground">
+                  <Trans>Quick primer:</Trans>
+                </span>{" "}
+                <Trans>
+                  PartyGem AI is our consulting agency (AI/ML and full-stack software). PartyGem is our flagship
+                  product — the intelligent event management service described on this page. The features below are
+                  for PartyGem the app.
+                </Trans>{" "}
+                <Link href="/about" className="underline underline-offset-4 hover:text-foreground">
+                  <Trans>Meet the agency</Trans>
+                </Link>
+                .
               </p>
             </div>
           </div>
@@ -490,23 +511,26 @@ export default function FeaturesPage() {
 
       <section className="w-full py-12 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
               <Trans>Plan smarter. Fund faster.</Trans>
             </h2>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-2">
               <Trans>Plan your first AI-powered event today.</Trans>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link href="/contact">
-                  <Trans>Get Started Free</Trans>
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/pricing">
-                  <Trans>View Pricing</Trans>
+            <p className="text-sm text-muted-foreground mb-6">
+              <Trans>Plans and pricing live inside the app — sign in to pick the tier that fits your event.</Trans>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" className="w-full sm:w-auto" asChild>
+                <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
+                  <Trans>Try PartyGem</Trans>
                   <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+                <Link href="/contact">
+                  <Trans>Talk to the team</Trans>
                 </Link>
               </Button>
             </div>

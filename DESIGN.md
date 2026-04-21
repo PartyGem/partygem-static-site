@@ -93,12 +93,11 @@ All components below live in `components/ui/*` (shadcn patterns) or top-level `c
 - **Outline:** `border border-input bg-transparent text-foreground`, hover `bg-muted/70`. Used as the secondary CTA on every hero ("Work with our agency", "Talk to the agency").
 - **Ghost / link:** For in-content affordances (e.g., "See Sample Dashboards" on features).
 - **Sizes:** `sm`, `default`, `lg` (hero), `icon`. Hero pairings always use `size="lg"`.
-- **Special brand buttons (Pricing):** `bg-brand-purple hover:bg-brand-purple/90` for the premium tier; `border-brand-purple text-brand-purple hover:bg-brand-purple/10` for free/business outlines. These are the **only** places brand colors override the primary token in buttons.
 
 ### Cards
 
 - Base: `rounded-lg border border-border bg-background shadow-sm`.
-- Hover (`.pricing-card`, feature cards): `hover:translate-y-[-4px] hover:shadow-md`, 300 ms ease.
+- Hover (feature cards, Gems family cards): `hover:translate-y-[-4px] hover:shadow-md`, 300 ms ease.
 - **Roadmap/future Gem cards:** `border-dashed border-primary/30` — signals "not yet shipped" without loud copy.
 - **Live/flagship card:** solid `border-primary/30` plus a "Live" pill in `bg-primary/10 text-primary`.
 
@@ -122,7 +121,7 @@ All components below live in `components/ui/*` (shadcn patterns) or top-level `c
 
 - `bg-muted/50 border-t`, 4-column grid on desktop.
 - Brand tagline is required: `"AI/ML & full-stack consulting agency. Makers of PartyGem and a growing family of Gems powering Events as a Service."`
-- Columns: **Product** (features, pricing, app link) · **Agency** (about, contact, privacy, terms).
+- Columns: **Product** (features, app link) · **Agency** (about, contact, privacy, terms). Pricing is intentionally **not** linked from the marketing site — it lives inside the app at `https://app.partygemai.com`.
 
 ### Hero surface (`.hero-gradient` in `globals.css`)
 
@@ -160,8 +159,8 @@ All components below live in `components/ui/*` (shadcn patterns) or top-level `c
 | Card (default) | `border border-border shadow-sm`. |
 | Card (hover) | `shadow-md` + `translate-y-[-4px]`. |
 | Card (roadmap) | Dashed 1 px `border-dashed border-primary/30`, no shadow. |
-| Sticky navbar (scrolled) | `bg-background/80 backdrop-blur-md border-b` (no shadow — backdrop blur carries the depth). |
-| Pricing highlight | The Premium card adds `bg-brand-purple/20 border-brand-purple` — the *only* filled brand surface in the system. |
+| Sticky navbar (scrolled) | `bg-background/95 backdrop-blur-md border-b shadow-sm` (fully opaque so content doesn't bleed through). |
+| Flagship Gem card | The home "PartyGem" card adds `border-primary/30` plus a "Live" pill — a subtle filled accent; brand color is never used as wallpaper. |
 
 **Rule:** Depth comes from border + backdrop blur + small shadow. Avoid glow effects, avoid heavy `shadow-xl`.
 
@@ -183,7 +182,8 @@ All components below live in `components/ui/*` (shadcn patterns) or top-level `c
 - Don't use serif or monospace fonts on marketing pages.
 - Don't put the wordmark "PartyGem" where you mean the agency — it dilutes the dual-identity system.
 - Don't animate on hover without a corresponding `prefers-reduced-motion` reset.
-- Don't fill large surfaces with brand purple; it's an accent, not a wallpaper (the Premium pricing card is the single sanctioned exception).
+- Don't fill large surfaces with brand purple; it's an accent, not a wallpaper.
+- Don't reintroduce a `/pricing` route or link pricing tiers from this static site — plans live inside the app (`https://app.partygemai.com`) so they can change without a marketing-site deploy.
 
 ---
 

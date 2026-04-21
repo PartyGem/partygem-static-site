@@ -31,11 +31,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-muted-foreground hover:text-foreground">
-                  <Trans>Pricing</Trans>
-                </Link>
-              </li>
-              <li>
                 <a
                   href="https://app.partygemai.com"
                   target="_blank"

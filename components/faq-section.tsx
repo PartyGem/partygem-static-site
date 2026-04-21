@@ -44,7 +44,7 @@ const faqData: FAQItem[] = [
   {
     question: "Is PartyGem free to use?",
     answer:
-      "Yes. Our Free Plan includes essential event creation and automated reminders. For advanced features like AI-powered KPI analytics, enhanced messaging, and sponsorship tracking, see our Premium and Business plans.",
+      "Yes. PartyGem offers a free tier with essential event creation and automated reminders, plus paid tiers that unlock advanced features like AI-powered KPI analytics, enhanced messaging, and sponsorship tracking. Plans and pricing live inside the app — sign in at app.partygemai.com to pick the tier that fits your event.",
   },
 ]
 
@@ -63,7 +63,7 @@ export function FAQSection() {
             <Trans>Frequently Asked Questions</Trans>
           </h2>
           <p className="text-muted-foreground mx-auto max-w-[700px]">
-            <Trans>Get answers to common questions about PartyGem AI's features, security, and pricing.</Trans>
+            <Trans>Get answers to common questions about PartyGem AI, PartyGem the product, and how they work together.</Trans>
           </p>
         </div>
 
