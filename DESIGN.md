@@ -89,15 +89,16 @@ All components below live in `components/ui/*` (shadcn patterns) or top-level `c
 
 ### Buttons (`components/ui/button.tsx`)
 
-- **Primary (default):** solid `bg-primary text-primary-foreground`, 0.5rem radius, subtle shadow. Hover darkens via `hover:bg-primary/90`. Used for top CTAs ("Try PartyGem", "Get in Touch").
-- **Outline:** `border border-input bg-transparent text-foreground`, hover `bg-muted/70`. Used as the secondary CTA on every hero ("Work with our agency", "Talk to the agency").
+- **Primary (default):** solid `bg-primary text-primary-foreground`, 0.5rem radius, subtle shadow. Hover darkens via `hover:bg-primary/90`. Used for top CTAs ("Work with our agency", "Talk to the team", "Get in Touch").
+- **Outline:** `border border-input bg-transparent text-foreground`, hover `bg-muted/70`. Used as the secondary CTA on every hero ("See PartyGem features", "Meet the agency").
 - **Ghost / link:** For in-content affordances (e.g., "See Sample Dashboards" on features).
 - **Sizes:** `sm`, `default`, `lg` (hero), `icon`. Hero pairings always use `size="lg"`.
 
 ### Cards
 
 - Base: `rounded-lg border border-border bg-background shadow-sm`.
-- Hover (feature cards, Gems family cards): `hover:translate-y-[-4px] hover:shadow-md`, 300 ms ease.
+- Informational cards (feature cards, roadmap cards on `/features`): static, no hover lift. They describe features and don't link anywhere, so they shouldn't telegraph interactivity.
+- Hover (Gems family cards on `/about`, recognition cards): `hover:translate-y-[-4px] hover:shadow-md`, 300 ms ease. Used only when the card is the focal visual of a section.
 - **Roadmap/future Gem cards:** `border-dashed border-primary/30` — signals "not yet shipped" without loud copy.
 - **Live/flagship card:** solid `border-primary/30` plus a "Live" pill in `bg-primary/10 text-primary`.
 
@@ -112,16 +113,16 @@ All components below live in `components/ui/*` (shadcn patterns) or top-level `c
 
 ### Navigation (`components/navbar.tsx`)
 
-- Sticky, `z-50`, transitions to `bg-background/80 backdrop-blur-md border-b` after 10 px scroll; transparent above.
+- Sticky, `z-50`, transitions to `bg-background/95 supports-[backdrop-filter]:bg-background/90 backdrop-blur-md border-b shadow-sm` after 10 px scroll; transparent above.
 - Logo is wordmark-only: `PartyGem AI` in `font-bold text-xl`.
 - Active link gets `text-primary`; inactive is `text-muted-foreground`. Hover moves to `text-primary`.
-- Primary CTA on the right is **always** "Try PartyGem" → `https://app.partygemai.com`.
+- Right side is reserved for the theme toggle and the mobile menu button only. No persistent product CTA in the navbar — CTAs live inside each page so we can retire, reroute, or seasonalize them without touching chrome.
 
 ### Footer (`components/footer.tsx`)
 
 - `bg-muted/50 border-t`, 4-column grid on desktop.
 - Brand tagline is required: `"AI/ML & full-stack consulting agency. Makers of PartyGem and a growing family of Gems powering Events as a Service."`
-- Columns: **Product** (features, app link) · **Agency** (about, contact, privacy, terms). Pricing is intentionally **not** linked from the marketing site — it lives inside the app at `https://app.partygemai.com`.
+- Columns: **Product** (features) · **Agency** (about, contact, privacy, terms). Pricing is intentionally **not** linked from the marketing site — it lives inside the app at `https://app.partygemai.com`. The app URL is also intentionally not a CTA here; if/when we turn a "Try" push back on, re-add it in a single place and reflect it in this doc.
 
 ### Hero surface (`.hero-gradient` in `globals.css`)
 
@@ -171,7 +172,7 @@ All components below live in `components/ui/*` (shadcn patterns) or top-level `c
 ### Do
 - **Brand-name discipline:** "PartyGem AI" for the agency/orchestration layer; "PartyGem" for the product; other Gems are proper-cased ("Service Gem", "Venue Gem", "RoboGem").
 - **Use `<Trans>` wrapping** for any user-visible string in this repo — it's how localization hooks into the site.
-- **Pair dual CTAs** in every hero: one to the product (`Try PartyGem`), one to the agency (`Work with our agency` / `Talk to us`).
+- **Pair dual CTAs** in every hero: one to the agency (`Work with our agency` / `Talk to the agency` / `Talk to the team` → `/contact`) as primary, one to the product story (`See PartyGem features` → `/features`, or `Meet the agency` → `/about`) as secondary outline.
 - **Signal roadmap vs live** with dashed borders and `Roadmap` / `Future` pills, never with grey text alone.
 - **Respect reduced motion.** All transitions must be disableable via `@media (prefers-reduced-motion)`.
 - **Use semantic HSL tokens** (`hsl(var(--primary))`) so dark mode "just works."
@@ -224,7 +225,7 @@ Focus ring             : hsl(var(--ring))                                 (= bra
 
 **Build a dual-CTA hero for the agency:**
 
-> Full-width `min-h-[90vh]` section with the `.hero-gradient` class. Centered stack: a `rounded-full border bg-background/60 backdrop-blur` kicker with a `Sparkles` icon, then a `text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter` H1, then an `text-xl md:text-2xl text-muted-foreground max-w-[800px]` subhead. Two CTAs: primary `Button size="lg"` linking to `https://app.partygemai.com` (external), and an outline `Button size="lg"` linking to `/contact`. Respect `prefers-reduced-motion`.
+> Full-width `min-h-[90vh]` section with the `.hero-gradient` class. Centered stack: a `rounded-full border bg-background/60 backdrop-blur` kicker with a `Sparkles` icon, then a `text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter` H1, then an `text-xl md:text-2xl text-muted-foreground max-w-[800px]` subhead. Two CTAs: primary `Button size="lg"` linking to `/contact` ("Work with our agency" / "Talk to the team"), and an outline `Button size="lg"` linking to `/features` ("See PartyGem features") or `/about` ("Meet the agency"). Respect `prefers-reduced-motion`.
 
 **Flag a roadmap item vs a live product:**
 

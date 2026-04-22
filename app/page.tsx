@@ -116,13 +116,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-8 w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto" asChild>
-                <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-                  <Trans>Try PartyGem</Trans>
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">
                   <Trans>Work with our agency</Trans>
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+                <Link href="/features">
+                  <Trans>See PartyGem features</Trans>
                 </Link>
               </Button>
             </div>
@@ -370,13 +370,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button size="lg" className="w-full sm:w-auto" asChild>
-                <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-                  <Trans>Try PartyGem</Trans>
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">
                   <Trans>Talk to the agency</Trans>
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+                <Link href="/features">
+                  <Trans>See PartyGem features</Trans>
                 </Link>
               </Button>
             </div>

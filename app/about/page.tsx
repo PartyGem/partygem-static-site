@@ -52,18 +52,8 @@ export default function AboutPage() {
               </h2>
               <p className="text-muted-foreground mb-6 text-base sm:text-lg">
                 <Trans>
-                  We exist to ship production-grade intelligent software — both for our own product line and for
-                  clients who need serious AI/ML and full-stack expertise. We believe the next decade of computing is
-                  about orchestrating specialized services with AI, and we're building the agency and the products to
-                  prove it.
-                </Trans>
-              </p>
-              <p className="text-muted-foreground mb-6 text-sm sm:text-base">
-                <Trans>
-                  Our near-term focus is two-fold. First, scale PartyGem — our intelligent event management service —
-                  into a platform any organizer can use. Second, grow PartyGem AI into a consulting agency trusted by
-                  private sector clients and the U.S. federal government to deliver software-heavy projects through
-                  SAM.gov, NSF SBIR, and similar vehicles.
+                  We exist to ship production-grade intelligent software, both for our own product line and for clients
+                  who need serious AI/ML and full-stack expertise.
                 </Trans>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -99,9 +89,15 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
               <Trans>The Gems Family</Trans>
             </h2>
+            <p className="text-foreground text-base sm:text-lg font-medium mb-4">
+              <Trans>
+                The next decade of computing is about orchestrating specialized services with AI. We're building the
+                agency and the products to prove it.
+              </Trans>
+            </p>
             <p className="text-muted-foreground text-base sm:text-lg">
               <Trans>
-                PartyGem AI orchestrates a portfolio of products — "Gems" — that together power Events as a Service.
+                PartyGem AI orchestrates a portfolio of products ("Gems") that together power Events as a Service.
                 PartyGem is live. Service Gem, Venue Gem, and RoboGem are on the roadmap. Additional Gems will be
                 conjured later.
               </Trans>

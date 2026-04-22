@@ -30,16 +30,6 @@ export function Footer() {
                   <Trans>PartyGem Features</Trans>
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://app.partygemai.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <Trans>Try PartyGem</Trans>
-                </a>
-              </li>
             </ul>
           </div>
 

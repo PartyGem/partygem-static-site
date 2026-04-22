@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
@@ -66,11 +65,6 @@ export function Navbar() {
 
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <Button asChild className="hidden md:flex">
-            <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-              Try PartyGem
-            </a>
-          </Button>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -94,11 +88,6 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="w-full mt-4">
-              <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-                Try PartyGem
-              </a>
-            </Button>
           </div>
         </div>
       )}

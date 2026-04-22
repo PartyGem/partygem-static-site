@@ -46,14 +46,12 @@ export default function FeaturesPage() {
               </h1>
               <p className="mx-auto max-w-[760px] text-base sm:text-lg md:text-xl text-muted-foreground">
                 <Trans>
-                  Discover how PartyGem — our intelligent event management service — helps you create, manage, and
-                  analyze events with precision and ease throughout the entire event lifecycle.
+                  PartyGem is our intelligent event management service. It helps you create, manage, and analyze events
+                  with precision and ease throughout the entire event lifecycle.
                 </Trans>
               </p>
               <p className="mx-auto max-w-[600px] text-sm sm:text-base text-muted-foreground font-medium">
-                <Trans>
-                  We empower anyone to run events like a pro — no prior event management experience required.
-                </Trans>
+                <Trans>We empower anyone to run events like a pro. No prior experience required.</Trans>
               </p>
             </div>
             <div className="mx-auto max-w-2xl rounded-lg border border-border bg-background/60 p-4 text-left text-sm text-muted-foreground mt-2">
@@ -63,8 +61,8 @@ export default function FeaturesPage() {
                 </span>{" "}
                 <Trans>
                   PartyGem AI is our consulting agency (AI/ML and full-stack software). PartyGem is our flagship
-                  product — the intelligent event management service described on this page. The features below are
-                  for PartyGem the app.
+                  product, the intelligent event management service described on this page. The features below are for
+                  PartyGem the app.
                 </Trans>{" "}
                 <Link href="/about" className="underline underline-offset-4 hover:text-foreground">
                   <Trans>Meet the agency</Trans>
@@ -89,7 +87,7 @@ export default function FeaturesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Ticket className="h-6 w-6 text-primary" />
@@ -100,13 +98,13 @@ export default function FeaturesPage() {
               <p className="text-muted-foreground mb-4">
                 <Trans>
                   Advanced RSVP and ticketing flows designed to handle organizers, attendees, guest users, and
-                  subscription tiers — including integrated ticket sales and payment processing.
+                  subscription tiers, including integrated ticket sales and payment processing.
                 </Trans>
               </p>
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
               style={{ transitionDelay: "100ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -138,7 +136,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
               style={{ transitionDelay: "200ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -176,7 +174,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
               style={{ transitionDelay: "300ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -208,7 +206,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
               style={{ transitionDelay: "400ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -250,7 +248,7 @@ export default function FeaturesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <MapPin className="h-6 w-6 text-primary" />
@@ -266,7 +264,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
               style={{ transitionDelay: "100ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -284,7 +282,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
               style={{ transitionDelay: "200ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -303,7 +301,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
               style={{ transitionDelay: "300ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -321,7 +319,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
               style={{ transitionDelay: "400ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -355,7 +353,8 @@ export default function FeaturesPage() {
               </p>
               <Button size="lg" variant="default" asChild>
                 <Link href="/contact">
-                  <Trans>Request a Demo</Trans>
+                  <Trans>Talk to the team</Trans>
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -519,18 +518,18 @@ export default function FeaturesPage() {
               <Trans>Plan your first AI-powered event today.</Trans>
             </p>
             <p className="text-sm text-muted-foreground mb-6">
-              <Trans>Plans and pricing live inside the app — sign in to pick the tier that fits your event.</Trans>
+              <Trans>Plans and pricing live inside the app. Get in touch and we'll help you get started.</Trans>
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button size="lg" className="w-full sm:w-auto" asChild>
-                <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-                  <Trans>Try PartyGem</Trans>
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">
                   <Trans>Talk to the team</Trans>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+                <Link href="/about">
+                  <Trans>Meet the agency</Trans>
                 </Link>
               </Button>
             </div>
