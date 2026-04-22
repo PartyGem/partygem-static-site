@@ -14,10 +14,21 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://partygemai.com"),
-  title: "PartyGem AI - Analytics-Driven Event Management Platform",
+  title: "PartyGem AI — AI/ML & Full-Stack Consulting. Flagship product: PartyGem",
   description:
-    "Run unforgettable events & track every metric with PartyGem AI's comprehensive event management platform.",
-  keywords: ["event management", "analytics", "event platform", "event metrics", "event planning"],
+    "PartyGem AI is a consulting agency for AI/ML and full-stack software development. Our flagship product, PartyGem, is an intelligent event management service — one of a growing family of Gems.",
+  keywords: [
+    "AI consulting",
+    "ML consulting",
+    "full-stack development",
+    "software consulting",
+    "government contracting",
+    "SAM.gov",
+    "NSF SBIR",
+    "event management",
+    "PartyGem",
+    "events as a service",
+  ],
   authors: [{ name: "PartyGem AI" }],
   creator: "PartyGem AI",
   publisher: "PartyGem AI",
@@ -25,24 +36,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://partygemai.com",
-    title: "PartyGem AI - Analytics-Driven Event Management Platform",
+    title: "PartyGem AI — AI/ML & Full-Stack Consulting. Flagship product: PartyGem",
     description:
-      "Run unforgettable events & track every metric with PartyGem AI's comprehensive event management platform.",
+      "PartyGem AI is a consulting agency for AI/ML and full-stack software development. Our flagship product, PartyGem, is an intelligent event management service.",
     siteName: "PartyGem AI",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "PartyGem AI - Analytics-Driven Event Management Platform",
+        alt: "PartyGem AI — AI/ML & Full-Stack Consulting, makers of PartyGem",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PartyGem AI - Analytics-Driven Event Management Platform",
+    title: "PartyGem AI — AI/ML & Full-Stack Consulting. Flagship product: PartyGem",
     description:
-      "Run unforgettable events & track every metric with PartyGem AI's comprehensive event management platform.",
+      "PartyGem AI is a consulting agency for AI/ML and full-stack software development. Our flagship product, PartyGem, is an intelligent event management service.",
     images: ["/og-image.png"],
   },
     generator: 'v0.app'

@@ -12,6 +12,11 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
+    question: "What's the difference between PartyGem AI and PartyGem?",
+    answer:
+      "PartyGem AI is our consulting agency — we build AI/ML and full-stack software for clients and for ourselves. PartyGem is our flagship product, an intelligent event management service. Service Gem, Venue Gem, and RoboGem are additional Gems on our roadmap, all orchestrated by PartyGem AI as an Events-as-a-Service platform.",
+  },
+  {
     question: "How secure is my data?",
     answer:
       "We prioritize the security of your data. Users and event organizers don't trust big tech with event data. PartyGem is privacy-first, focusing on data security and transparent AI-powered insights.",
@@ -24,22 +29,22 @@ const faqData: FAQItem[] = [
   {
     question: "What makes PartyGem different from Eventbrite or Meetup?",
     answer:
-      "Traditional platforms like Eventbrite and Meetup make money through ticketing fees, commissions, and ad-driven ecosystems. PartyGem is different because it: Uses AI-powered event management for smart planning and engagement. Offers flexible monetization with both free and premium plans—no hidden ticketing fees. Provides real-time analytics and sentiment tracking to optimize your events. Supports future expansion to mobile apps for a seamless experience.",
+      "Traditional platforms like Eventbrite and Meetup make money through ticketing fees, commissions, and ad-driven ecosystems. PartyGem is different because it: uses AI-powered event management for smart planning and engagement; offers flexible monetization with both free and premium plans — no hidden ticketing fees; provides real-time analytics and sentiment tracking to optimize your events; and plugs into a broader Gems ecosystem for services, venues, and on-site concierge.",
   },
   {
     question: "Can I use PartyGem for private events?",
     answer:
-      "Yes! PartyGem is designed for both public and private events. Our private event analytics help organizers track attendance, gauge sentiment, and optimize future gatherings—all without sharing data publicly.",
+      "Yes. PartyGem is designed for both public and private events. Our private event analytics help organizers track attendance, gauge sentiment, and optimize future gatherings — all without sharing data publicly.",
   },
   {
-    question: "What support options are available?",
+    question: "Does PartyGem AI take on consulting or government work?",
     answer:
-      "We offer comprehensive support for all our plans. Starter users have access to email support. Pro users benefit from priority email support, and Enterprise users receive 24/7 priority support along with a dedicated account manager.",
+      "Yes. As a consulting agency, we take on AI/ML and full-stack engagements for private and public sector clients. We are partnered with the U.S. federal government to pursue software contracts through SAM.gov (registration actively being renewed with updated tax documentation) and engage with non-dilutive funding vehicles such as the NSF SBIR program.",
   },
   {
     question: "Is PartyGem free to use?",
     answer:
-      "Yes! Our Free Plan includes essential event creation and automated reminders. For more advanced features like AI-powered KPI analytics, enhanced messaging, and sponsorship tracking, check out our Premium and Business plans.",
+      "Yes. PartyGem offers a free tier with essential event creation and automated reminders, plus paid tiers that unlock advanced features like AI-powered KPI analytics, enhanced messaging, and sponsorship tracking. Plans and pricing live inside the app — sign in at app.partygemai.com to pick the tier that fits your event.",
   },
 ]
 
@@ -58,7 +63,7 @@ export function FAQSection() {
             <Trans>Frequently Asked Questions</Trans>
           </h2>
           <p className="text-muted-foreground mx-auto max-w-[700px]">
-            <Trans>Get answers to common questions about PartyGem AI's features, security, and pricing.</Trans>
+            <Trans>Get answers to common questions about PartyGem AI, PartyGem the product, and how they work together.</Trans>
           </p>
         </div>
 

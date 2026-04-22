@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
@@ -30,7 +29,6 @@ export function Navbar() {
   const navItems = [
     { name: "Features", href: "/features" },
     { name: "About", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "/contact" },
   ]
 
@@ -38,7 +36,9 @@ export function Navbar() {
     <header
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-200",
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent",
+        isScrolled
+          ? "bg-background/95 supports-[backdrop-filter]:bg-background/90 backdrop-blur-md border-b shadow-sm"
+          : "bg-transparent",
       )}
     >
       <div className="container flex h-16 items-center justify-between">
@@ -65,11 +65,6 @@ export function Navbar() {
 
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <Button asChild className="hidden md:flex">
-            <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-              Try the app
-            </a>
-          </Button>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -79,7 +74,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden border-t">
+        <div className="md:hidden border-t bg-background shadow-sm">
           <div className="container py-4 space-y-4">
             {navItems.map((item) => (
               <Link
@@ -93,11 +88,6 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="w-full mt-4">
-              <a href="https://app.partygemai.com" target="_blank" rel="noopener noreferrer">
-                Try the app
-              </a>
-            </Button>
           </div>
         </div>
       )}

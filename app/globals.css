@@ -127,15 +127,6 @@
     animation-delay: 0.8s;
   }
 
-  .pricing-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .pricing-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  }
-
   .feature-item {
     transition: background-color 0.3s ease;
   }
@@ -167,7 +158,6 @@
 
     .fade-in,
     .reveal,
-    .pricing-card,
     .feature-item {
       transition: none !important;
       transform: none !important;

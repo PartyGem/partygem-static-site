@@ -18,6 +18,7 @@ import {
   Camera,
   Bot,
   ExternalLink,
+  Sparkles,
 } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 
@@ -35,20 +36,38 @@ export default function FeaturesPage() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1.5 text-[10px] sm:text-xs font-medium uppercase tracking-wide text-muted-foreground backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5 text-brand-purple flex-shrink-0" />
+              <Trans>PartyGem · The flagship product from PartyGem AI</Trans>
+            </span>
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
                 <Trans>Powerful Features for Exceptional Events</Trans>
               </h1>
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+              <p className="mx-auto max-w-[760px] text-base sm:text-lg md:text-xl text-muted-foreground">
                 <Trans>
-                  Discover how PartyGemAI's comprehensive toolkit helps you create, manage, and analyze events with
-                  precision and ease throughout the entire event lifecycle.
+                  PartyGem is our intelligent event management service. It helps you create, manage, and analyze events
+                  with precision and ease throughout the entire event lifecycle.
                 </Trans>
               </p>
-              <p className="mx-auto max-w-[600px] text-muted-foreground font-medium">
+              <p className="mx-auto max-w-[600px] text-sm sm:text-base text-muted-foreground font-medium">
+                <Trans>We empower anyone to run events like a pro. No prior experience required.</Trans>
+              </p>
+            </div>
+            <div className="mx-auto max-w-2xl rounded-lg border border-border bg-background/60 p-4 text-left text-sm text-muted-foreground mt-2">
+              <p>
+                <span className="font-semibold text-foreground">
+                  <Trans>Quick primer:</Trans>
+                </span>{" "}
                 <Trans>
-                  We empower anyone to run events like a pro — no prior event management experience required.
-                </Trans>
+                  PartyGem AI is our consulting agency (AI/ML and full-stack software). PartyGem is our flagship
+                  product, the intelligent event management service described on this page. The features below are for
+                  PartyGem the app.
+                </Trans>{" "}
+                <Link href="/about" className="underline underline-offset-4 hover:text-foreground">
+                  <Trans>Meet the agency</Trans>
+                </Link>
+                .
               </p>
             </div>
           </div>
@@ -68,7 +87,7 @@ export default function FeaturesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Ticket className="h-6 w-6 text-primary" />
@@ -79,13 +98,13 @@ export default function FeaturesPage() {
               <p className="text-muted-foreground mb-4">
                 <Trans>
                   Advanced RSVP and ticketing flows designed to handle organizers, attendees, guest users, and
-                  subscription tiers — including integrated ticket sales and payment processing.
+                  subscription tiers, including integrated ticket sales and payment processing.
                 </Trans>
               </p>
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
               style={{ transitionDelay: "100ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -117,7 +136,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
               style={{ transitionDelay: "200ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -155,7 +174,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
               style={{ transitionDelay: "300ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -187,7 +206,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-border shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${featuresInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-border shadow-sm fade-in ${featuresInView ? "reveal" : ""}`}
               style={{ transitionDelay: "400ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -229,7 +248,7 @@ export default function FeaturesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <MapPin className="h-6 w-6 text-primary" />
@@ -245,7 +264,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
               style={{ transitionDelay: "100ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -263,7 +282,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
               style={{ transitionDelay: "200ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -282,7 +301,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
               style={{ transitionDelay: "300ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -300,7 +319,7 @@ export default function FeaturesPage() {
             </div>
 
             <div
-              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md fade-in ${roadmapInView ? "reveal" : ""}`}
+              className={`bg-background rounded-lg p-6 border border-dashed border-primary/30 shadow-sm fade-in ${roadmapInView ? "reveal" : ""}`}
               style={{ transitionDelay: "400ms" }}
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -324,7 +343,7 @@ export default function FeaturesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tighter mb-4">
-                <Trans>See PartyGemAI in action</Trans>
+                <Trans>See PartyGem in action</Trans>
               </h2>
               <p className="text-xl text-muted-foreground mb-6">
                 <Trans>
@@ -334,7 +353,8 @@ export default function FeaturesPage() {
               </p>
               <Button size="lg" variant="default" asChild>
                 <Link href="/contact">
-                  <Trans>Request a Demo</Trans>
+                  <Trans>Talk to the team</Trans>
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -343,7 +363,7 @@ export default function FeaturesPage() {
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/PlCraHnOq78?si=D_8iRrcnPVskbpMP&start=18"
-                title="PartyGemAI MVP Demo"
+                title="PartyGem MVP Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -490,23 +510,26 @@ export default function FeaturesPage() {
 
       <section className="w-full py-12 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
               <Trans>Plan smarter. Fund faster.</Trans>
             </h2>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-2">
               <Trans>Plan your first AI-powered event today.</Trans>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
+            <p className="text-sm text-muted-foreground mb-6">
+              <Trans>Plans and pricing live inside the app. Get in touch and we'll help you get started.</Trans>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">
-                  <Trans>Get Started Free</Trans>
+                  <Trans>Talk to the team</Trans>
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/pricing">
-                  <Trans>View Pricing</Trans>
-                  <ArrowRight className="ml-2 h-4 w-4" />
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+                <Link href="/about">
+                  <Trans>Meet the agency</Trans>
                 </Link>
               </Button>
             </div>

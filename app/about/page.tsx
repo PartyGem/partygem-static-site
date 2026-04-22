@@ -3,7 +3,19 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Trans } from "@/components/trans"
-import { ArrowRight, Award, Users, Zap } from "lucide-react"
+import {
+  ArrowRight,
+  Award,
+  Bot,
+  Building2,
+  Gem,
+  Landmark,
+  MapPin,
+  ShieldCheck,
+  Sparkles,
+  Users,
+  Zap,
+} from "lucide-react"
 
 export default function AboutPage() {
   return (
@@ -11,13 +23,19 @@ export default function AboutPage() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                <Trans>About PartyGem AI</Trans>
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1.5 text-[10px] sm:text-xs font-medium uppercase tracking-wide text-muted-foreground backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5 text-brand-purple flex-shrink-0" />
+              <Trans>About PartyGem AI</Trans>
+            </span>
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.1]">
+                <Trans>A consulting agency conjuring intelligent software.</Trans>
               </h1>
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+              <p className="mx-auto max-w-[760px] text-base sm:text-lg md:text-xl text-muted-foreground">
                 <Trans>
-                  We're building the future of event management with AI-powered analytics and seamless user experiences.
+                  PartyGem AI is a consulting agency specializing in AI/ML and full-stack software development. Our
+                  flagship product, PartyGem, is an intelligent event management service — and the first of a growing
+                  family of "Gems" we're conjuring into a new gig economy: Events as a Service.
                 </Trans>
               </p>
             </div>
@@ -27,35 +45,27 @@ export default function AboutPage() {
 
       <section className="w-full py-12 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tighter mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
                 <Trans>Our Mission</Trans>
               </h2>
-              <p className="text-muted-foreground mb-6 text-lg">
+              <p className="text-muted-foreground mb-6 text-base sm:text-lg">
                 <Trans>
-                  PartyGem AI was founded with a simple yet powerful vision: to democratize event management through
-                  intelligent technology. We believe every event organizer, regardless of size or budget, deserves
-                  access to enterprise-grade analytics and management tools.
+                  We exist to ship production-grade intelligent software, both for our own product line and for clients
+                  who need serious AI/ML and full-stack expertise.
                 </Trans>
               </p>
-              <p className="text-muted-foreground mb-6">
-                <Trans>
-                  Our platform combines cutting-edge AI with intuitive design to help event organizers create
-                  unforgettable experiences while tracking every metric that matters. From intimate gatherings to
-                  large-scale conferences, we're here to make event management effortless and data-driven.
-                </Trans>
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button className="w-full sm:w-auto" asChild>
                   <Link href="/features">
-                    <Trans>Explore Features</Trans>
+                    <Trans>See PartyGem features</Trans>
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" className="w-full sm:w-auto" asChild>
                   <Link href="/contact">
-                    <Trans>Get in Touch</Trans>
+                    <Trans>Work with the agency</Trans>
                   </Link>
                 </Button>
               </div>
@@ -63,7 +73,7 @@ export default function AboutPage() {
             <div className="relative aspect-square rounded-lg overflow-hidden">
               <Image
                 src="/images/mission-image.png"
-                alt="PartyGem AI SaaS for Hybrid Events - Diverse team celebrating with analytics dashboards"
+                alt="PartyGem AI — consulting agency and makers of PartyGem"
                 width={600}
                 height={600}
                 className="w-full h-full object-cover"
@@ -75,23 +85,257 @@ export default function AboutPage() {
 
       <section className="w-full py-12 md:py-24 bg-muted/50">
         <div className="container px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">
-              <Trans>Meet Our Founders</Trans>
+          <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              <Trans>The Gems Family</Trans>
             </h2>
-            <p className="text-muted-foreground mx-auto max-w-[700px]">
+            <p className="text-foreground text-base sm:text-lg font-medium mb-4">
               <Trans>
-                Our founding team brings together expertise in AI, software engineering, community organizing, and
-                business strategy to revolutionize the event management industry.
+                The next decade of computing is about orchestrating specialized services with AI. We're building the
+                agency and the products to prove it.
+              </Trans>
+            </p>
+            <p className="text-muted-foreground text-base sm:text-lg">
+              <Trans>
+                PartyGem AI orchestrates a portfolio of products ("Gems") that together power Events as a Service.
+                PartyGem is live. Service Gem, Venue Gem, and RoboGem are on the roadmap. Additional Gems will be
+                conjured later.
               </Trans>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto justify-items-center">
-            <Card className="overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <Card className="border-primary/30">
               <CardContent className="p-6">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <div className="flex items-start gap-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Sparkles className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-xl font-bold">
+                        <Trans>PartyGem</Trans>
+                      </h3>
+                      <span className="rounded-full bg-primary/10 text-primary text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5">
+                        <Trans>Live</Trans>
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      <Trans>
+                        Makes the event happen by managing it end-to-end — ticketing, RSVPs, check-in, sponsorships, and
+                        analytics, all powered by AI.
+                      </Trans>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-dashed border-primary/30">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Users className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-xl font-bold">
+                        <Trans>Service Gem</Trans>
+                      </h3>
+                      <span className="rounded-full bg-muted text-muted-foreground text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5">
+                        <Trans>Roadmap</Trans>
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      <Trans>
+                        Hires freelancers, caterers, businesses, and artists to sell their products or services into
+                        live events — a supply-side marketplace for the event economy.
+                      </Trans>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-dashed border-primary/30">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-xl font-bold">
+                        <Trans>Venue Gem</Trans>
+                      </h3>
+                      <span className="rounded-full bg-muted text-muted-foreground text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5">
+                        <Trans>Roadmap</Trans>
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      <Trans>
+                        Makes sure every event has a setting. A venue matching service that turns unused spaces into
+                        event opportunities.
+                      </Trans>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-dashed border-primary/30">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Bot className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-xl font-bold">
+                        <Trans>RoboGem</Trans>
+                      </h3>
+                      <span className="rounded-full bg-muted text-muted-foreground text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5">
+                        <Trans>Future</Trans>
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      <Trans>
+                        A humanoid concierge that helps guests check in and guides them across physical spaces and
+                        events — our long-term bet on embodied AI at the edge of hospitality.
+                      </Trans>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-10 max-w-3xl mx-auto rounded-lg border border-emerald-500/30 bg-background p-6 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-300 mb-3">
+              <Gem className="h-3 w-3" />
+              <Trans>The Master Emerald</Trans>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              <Trans>
+                PartyGem AI is the Master Emerald — the orchestration layer connecting every Gem into a new gig economy
+                anyone can participate in through Events as a Service.
+              </Trans>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24">
+        <div className="container px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1 text-[10px] sm:text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                <Landmark className="h-3.5 w-3.5 text-brand-aqua flex-shrink-0" />
+                <Trans>Government Contracting</Trans>
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4 mb-4">
+                <Trans>Partnered with the U.S. federal government.</Trans>
+              </h2>
+              <p className="text-muted-foreground mb-4 text-base sm:text-lg">
+                <Trans>
+                  A strategic focus for PartyGem AI is federal software contracting. We are partnered with the U.S.
+                  federal government to bid on software-related projects — through SAM.gov, NSF SBIR, and similar
+                  vehicles — and we are actively scoping capture opportunities with agencies and prime contractors.
+                </Trans>
+              </p>
+              <p className="text-muted-foreground mb-4 text-sm">
+                <Trans>
+                  Our SAM.gov registration is currently being re-verified with updated tax documentation; we're
+                  communicating this preemptively so contracting officers and teaming partners know exactly where we
+                  stand.
+                </Trans>
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                <li className="flex items-start">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2 mt-2" />
+                  <Trans>AI/ML systems, RAG, agentic workflows, and production MLOps</Trans>
+                </li>
+                <li className="flex items-start">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2 mt-2" />
+                  <Trans>Full-stack software: Go, Python, TypeScript, Next.js, Postgres, cloud-native</Trans>
+                </li>
+                <li className="flex items-start">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2 mt-2" />
+                  <Trans>Secure, auditable payment and data flows (Stripe Connect, webhooks, RBAC)</Trans>
+                </li>
+                <li className="flex items-start">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2 mt-2" />
+                  <Trans>Teaming welcome — small business, SBIR, IDIQ / BPA, and subcontracting</Trans>
+                </li>
+              </ul>
+              <p className="text-sm text-muted-foreground">
+                <Trans>
+                  If you're a federal contracting officer, primes partner, or agency PM — reach out through our main
+                  contact form below and we'll route you to the right team.
+                </Trans>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="rounded-lg border border-border bg-background p-5">
+                <Building2 className="h-6 w-6 text-primary mb-3" />
+                <h3 className="font-semibold mb-1">
+                  <Trans>SAM.gov Registered</Trans>
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  <Trans>Actively renewing with updated tax documentation; ready to bid on federal work.</Trans>
+                </p>
+              </div>
+              <div className="rounded-lg border border-border bg-background p-5">
+                <Award className="h-6 w-6 text-primary mb-3" />
+                <h3 className="font-semibold mb-1">
+                  <Trans>NSF SBIR</Trans>
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  <Trans>Pursuing non-dilutive funding to advance our AI research and platform work.</Trans>
+                </p>
+              </div>
+              <div className="rounded-lg border border-border bg-background p-5">
+                <ShieldCheck className="h-6 w-6 text-primary mb-3" />
+                <h3 className="font-semibold mb-1">
+                  <Trans>Security-First</Trans>
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  <Trans>Server-authoritative trust boundaries, auditable webhooks, privacy-first defaults.</Trans>
+                </p>
+              </div>
+              <div className="rounded-lg border border-border bg-background p-5">
+                <Users className="h-6 w-6 text-primary mb-3" />
+                <h3 className="font-semibold mb-1">
+                  <Trans>Teaming Ready</Trans>
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  <Trans>Open to subcontracting, SBIR partnerships, and IDIQ/BPA teaming arrangements.</Trans>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24 bg-muted/50">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              <Trans>Meet Our Founders</Trans>
+            </h2>
+            <p className="text-muted-foreground text-base sm:text-lg">
+              <Trans>
+                Our founding team brings together expertise in AI, software engineering, community organizing, and
+                business strategy to build PartyGem AI into a consulting agency and a product company.
+              </Trans>
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto items-stretch">
+            <Card className="overflow-hidden h-full">
+              <CardContent className="p-6 h-full">
+                <div className="flex flex-col items-center text-center h-full">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4 ring-2 ring-primary/20">
                     <Image
                       src="/images/kevin-photo.jpg"
                       alt="Kevin Wang"
@@ -100,17 +344,22 @@ export default function AboutPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Kevin Wang</h3>
-                  <p className="text-primary font-medium mb-4">Co-Founder/CFO</p>
+                  <h3 className="text-xl font-bold mb-1">Kevin Wang</h3>
+                  <p className="text-primary font-medium mb-2">
+                    <Trans>Co-Founder / CFO</Trans>
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground mb-4">
+                    <Gem className="h-3 w-3 text-brand-aqua" />
+                    <Trans>Steward of the Gem Treasury</Trans>
+                  </span>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                     <Trans>
-                      Kevin brings extensive experience in product management and business strategy. With a background
-                      in scaling technology platforms and a passion for creating user-centric solutions, he leads
-                      PartyGem AI's vision of making event management accessible and data-driven for organizers
-                      worldwide.
+                      Kevin brings extensive experience in product management and business strategy. He leads PartyGem
+                      AI's business operations, client engagements, and go-to-market strategy across both our
+                      consulting practice and our Gems product line.
                     </Trans>
                   </p>
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" className="mt-auto" asChild>
                     <Link href="https://www.linkedin.com/in/kwangpro/" target="_blank" rel="noopener noreferrer">
                       <Trans>LinkedIn Profile</Trans>
                     </Link>
@@ -119,10 +368,10 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="overflow-hidden">
-              <CardContent className="p-6">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
+            <Card className="overflow-hidden h-full">
+              <CardContent className="p-6 h-full">
+                <div className="flex flex-col items-center text-center h-full">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4 ring-2 ring-emerald-500/40">
                     <Image
                       src="/images/syed-photo.jpg"
                       alt="Syed Shah"
@@ -131,17 +380,23 @@ export default function AboutPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Syed Shah</h3>
-                  <p className="text-primary font-medium mb-4">Co-Founder/Tech Lead</p>
+                  <h3 className="text-xl font-bold mb-1">Syed Shah</h3>
+                  <p className="text-primary font-medium mb-2">
+                    <Trans>Co-Founder / Tech Lead</Trans>
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-300 mb-4">
+                    <Gem className="h-3 w-3" />
+                    <Trans>Keeper of the Master Emerald</Trans>
+                  </span>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                     <Trans>
-                      Syed is a seasoned software engineer and AI specialist with deep expertise in machine learning and
-                      scalable system architecture. He leads the technical development of PartyGem AI's platform,
-                      ensuring our AI-powered analytics deliver actionable insights while maintaining enterprise-grade
-                      performance and security.
+                      Syed is a seasoned software engineer and AI specialist with deep expertise in machine learning
+                      and scalable system architecture. He leads PartyGem AI's technical practice — building PartyGem,
+                      architecting the orchestration layer that connects every Gem, and delivering client engagements
+                      for AI/ML and full-stack work.
                     </Trans>
                   </p>
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" className="mt-auto" asChild>
                     <Link href="https://www.linkedin.com/in/swsprofile/" target="_blank" rel="noopener noreferrer">
                       <Trans>LinkedIn Profile</Trans>
                     </Link>
@@ -155,14 +410,14 @@ export default function AboutPage() {
 
       <section className="w-full py-12 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">
+          <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
               <Trans>Recognition & Support</Trans>
             </h2>
-            <p className="text-muted-foreground mx-auto max-w-[700px]">
+            <p className="text-muted-foreground text-base sm:text-lg">
               <Trans>
-                We're proud to be supported by leading organizations and programs that recognize our potential to
-                transform the event management industry.
+                We're proud to be supported by programs and partners that recognize our potential to ship intelligent
+                software — for the event industry, the commercial sector, and the federal government.
               </Trans>
             </p>
           </div>
@@ -179,8 +434,8 @@ export default function AboutPage() {
               </h3>
               <p className="text-muted-foreground text-sm">
                 <Trans>
-                  Selected for NVIDIA's prestigious startup acceleration program, providing access to cutting-edge AI
-                  technology and expert mentorship.
+                  Selected for NVIDIA's startup acceleration program, giving us access to cutting-edge AI technology
+                  and expert mentorship.
                 </Trans>
               </p>
             </Card>
@@ -188,16 +443,16 @@ export default function AboutPage() {
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center">
-                  <Award className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+                  <Landmark className="h-8 w-8 text-blue-600 dark:text-blue-400" />
                 </div>
               </div>
               <h3 className="text-lg font-bold mb-2">
-                <Trans>NSF SBIR Grant Applicant</Trans>
+                <Trans>SAM.gov Partnered</Trans>
               </h3>
               <p className="text-muted-foreground text-sm">
                 <Trans>
-                  Currently pursuing National Science Foundation Small Business Innovation Research funding to advance
-                  our AI-powered event analytics platform.
+                  Partnered with the U.S. federal government to bid on software-related contracts through SAM.gov
+                  (registration actively being renewed).
                 </Trans>
               </p>
             </Card>
@@ -209,12 +464,12 @@ export default function AboutPage() {
                 </div>
               </div>
               <h3 className="text-lg font-bold mb-2">
-                <Trans>Seeking Investment</Trans>
+                <Trans>NSF SBIR Track</Trans>
               </h3>
               <p className="text-muted-foreground text-sm">
                 <Trans>
-                  Actively pursuing small business grants and venture capital funding to scale our platform and expand
-                  our team of AI and event management experts.
+                  Pursuing National Science Foundation SBIR funding to advance our AI research and productize new
+                  Gems.
                 </Trans>
               </p>
             </Card>
@@ -240,8 +495,8 @@ export default function AboutPage() {
 
       <section className="w-full py-12 md:py-24 bg-muted/50">
         <div className="container px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
               <Trans>Our Values</Trans>
             </h2>
           </div>
@@ -256,8 +511,8 @@ export default function AboutPage() {
               </h3>
               <p className="text-muted-foreground">
                 <Trans>
-                  Every feature we build starts with understanding our users' needs and creating solutions that make
-                  their lives easier.
+                  Every feature and every engagement starts with understanding our users' needs and shipping solutions
+                  that make their lives easier.
                 </Trans>
               </p>
             </div>
@@ -267,27 +522,27 @@ export default function AboutPage() {
                 <Zap className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">
-                <Trans>Innovation Through AI</Trans>
+                <Trans>Intelligent by Default</Trans>
               </h3>
               <p className="text-muted-foreground">
                 <Trans>
-                  We leverage cutting-edge artificial intelligence to provide insights and automation that were
-                  previously impossible.
+                  We bake AI into the fabric of our products and our client work — deterministic where it matters,
+                  intelligent everywhere it helps.
                 </Trans>
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-primary" />
+                <ShieldCheck className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">
-                <Trans>Data Privacy First</Trans>
+                <Trans>Privacy & Security First</Trans>
               </h3>
               <p className="text-muted-foreground">
                 <Trans>
-                  We believe in transparent, secure data practices that put our users' privacy and security at the
-                  forefront of everything we do.
+                  Server-authoritative trust boundaries, audited data flows, and transparent AI — the standard for
+                  every Gem we ship and every client we serve.
                 </Trans>
               </p>
             </div>
@@ -304,25 +559,25 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">
-              <Trans>Ready to join our journey?</Trans>
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              <Trans>Ready to build with us?</Trans>
             </h2>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6">
               <Trans>
-                Whether you're an event organizer looking for better tools, an investor interested in our vision, or a
-                talented individual wanting to join our team, we'd love to hear from you.
+                Whether you're an event organizer, an enterprise looking for AI/ML expertise, a federal contracting
+                officer, or a talented engineer who wants to join the agency — we'd love to talk.
               </Trans>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">
                   <Trans>Get in Touch</Trans>
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                 <Link href="/features">
-                  <Trans>Learn More</Trans>
+                  <Trans>Explore PartyGem</Trans>
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
